@@ -1,0 +1,1 @@
+*	-fstype=cifs,credentials=$HOME/.hsr.ch/samba-user,uid=$UID,gid=$GROUP	://c206.hsr.ch/&
