@@ -36,3 +36,5 @@ binaries: /sbin/mount.cifs /usr/sbin/automount
 
 /usr/sbin/automount:
 	sudo apt install autofs
+
+/etc/auto.master: /usr/sbin/automount
