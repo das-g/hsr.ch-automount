@@ -1,6 +1,6 @@
 .PHONY: install
 install: configuration binaries
-	sudo reload autofs
+	sudo service autofs reload
 
 .PHONY: configuration
 configuration: ~/.hsr.ch/samba-user /etc/auto.hsr-alg /etc/auto.master.d/hsr.autofs
