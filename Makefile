@@ -7,6 +7,7 @@ configuration: ~/.hsr.ch/samba-user /etc/auto.hsr-alg /etc/auto.master.d/hsr.aut
 
 ~/.hsr.ch/samba-user: etc/samba/hsr-user
 	@mkdir -p $(@D)
+	@echo
 	@echo HSR Password will be saved in $@
 	touch $@
 	sudo chmod 0020 $@
