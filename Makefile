@@ -5,10 +5,19 @@ install: configuration binaries
 .PHONY: configuration
 configuration: ~/.hsr.ch/samba-user /etc/auto.hsr-alg /etc/auto.master.d/hsr.autofs
 
+.PHONY: change-hsr-pw
+change-hsr-pw:
+	$(MAKE) --always-make ~/.hsr.ch/samba-user
+	$(MAKE) install
+
 ~/.hsr.ch/samba-user: etc/samba/hsr-user
 	@mkdir -p $(@D)
 	@echo
 	@echo HSR Password will be saved in $@
+	@echo
+	@echo You can update it with
+	@echo "\t"$(MAKE) change-hsr-pw
+	@echo
 	touch $@
 	sudo chmod 0020 $@
 	sudo chown root $@
